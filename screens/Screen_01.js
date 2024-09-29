@@ -28,6 +28,14 @@ const Screen01 = ({ navigation }) => {
     </View>
 
   );
+  /*
+  const Screen01 = ({ navigation }) => { ... }:
+const Screen01: Đây là khai báo một component dạng hàm sử dụng cú pháp hàm mũi tên (arrow function).
+({ navigation }): Đối số navigation được truyền từ props, thường dùng trong các ứng dụng có sử dụng React Navigation để điều hướng giữa các màn hình.
+navigation: Cho phép điều hướng sang các màn hình khác bằng cách sử dụng các hàm như navigate().
+Screen01 hiển thị một màn hình gồm hình ảnh, tiêu đề, phụ đề, và hai nút. Nút "Sign up" sẽ điều hướng đến màn hình đăng ký (Screen02), còn nút "Login" sẽ điều hướng đến màn hình đăng nhập (Screen03).
+   Các thành phần giao diện được định dạng bởi các kiểu CSS trong đối tượng styles
+*/
 };
 
 const styles = StyleSheet.create({

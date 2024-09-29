@@ -8,11 +8,17 @@ const Screen02 = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  //Ẩn hiện mật khẩu
   const [agree, setAgree] = useState(false); // State cho checkbox
+  // useState: Đây là một hook trong React, được sử dụng để quản lý trạng thái (state) trong functional components. Ở đây, nó giúp theo dõi các giá trị như tên người dùng, email, mật khẩu, hiển thị mật khẩu, và checkbox đồng ý điều khoản.
+  
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
+  //Set nhập password chỉ hiển thị dấu chấm
+
   const handleContinue = () => {
   const userData = {
       username,
@@ -26,7 +32,7 @@ const Screen02 = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-         {/* Nút quay lại ở góc trái */}
+         {/* Nút quay lại ở góc trái, quay lại màn hình 01 */}
          <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Screen01')}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
@@ -41,6 +47,7 @@ const Screen02 = ({ navigation }) => {
           placeholder="Enter your user name"
           style={styles.input}
           onChangeText={setUsername}
+          //Đây là một event handler. Khi người dùng nhập liệu vào ô này, hàm setUsername sẽ được gọi, cập nhật giá trị username (state) với nội dung mà người dùng nhập.
           value={username}
           placeholderTextColor="#000"
         />

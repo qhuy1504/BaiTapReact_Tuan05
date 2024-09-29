@@ -12,7 +12,7 @@ const Screen03 = ({ navigation, route }) => {
     const togglePasswordVisibility = () => {
         setIsPasswordVisible(!isPasswordVisible);
     };
-
+    //Xử lý đăng nhập
     const handleLogin = () => {
         const user =  users.email === email && users.password === password;
       
